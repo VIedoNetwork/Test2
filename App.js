@@ -4,7 +4,7 @@ import {View, Text} from 'react-native'
 const App = () => {
   return (
   <View style={{flex: 1, justifyContent: 'center'}}>
-    <Text> Hello Bitch Hello TAE</Text>
+    <Text> Hello Bitch Hello TAE hello dome</Text>
   </View>
   )
 }
