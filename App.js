@@ -4,7 +4,7 @@ import {View, Text} from 'react-native'
 const App = () => {
   return (
   <View style={{flex: 1, justifyContent: 'center'}}>
-    <Text> Hello Bitch </Text>
+    <Text> Hello Bitch Hello TAE</Text>
   </View>
   )
 }
@@ -22,3 +22,5 @@ const FlexDirectionBasics = () => {
 
 
 export default FlexDirectionBasics;
+
+
