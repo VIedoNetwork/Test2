@@ -1,29 +1,40 @@
-import React from 'react'
-import {View, Text} from 'react-native'
+// In App.js in a new project
 
-const App = () => {
+import * as React from 'react';
+import { View, Text, Button } from 'react-native';
+
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+
+const Stack = createStackNavigator();
+
+function App() {
   return (
-  <View style={{flex: 1, justifyContent: 'center'}}>
-    <Text> Hello Bitch Hello TAE hello dome</Text>
-  </View>
-  )
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="Mansea" component={ManseaScreens} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
 }
 
-const FlexDirectionBasics = () => {
+function HomeScreen({navigation}) {
   return (
-    // Try setting `flexDirection` to `column`.
-    <View style={{flex: 1, flexDirection: 'row'}}>
-      <View style={{width: 50, height: 50, backgroundColor: 'powderblue'}} />
-      <View style={{width: 50, height: 50, backgroundColor: 'skyblue'}} />
-      <View style={{width: 50, height: 50, backgroundColor: 'steelblue'}} />
+    <View>
+      <Text>Home Screen</Text>
+      <Button onPress={()=>navigation.navigate('Mansea')} title="Go to Mansea"></Button>
     </View>
   );
-};
+}
+
+function ManseaScreens() {
+  return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Text>Mansea Screen</Text>
+    </View>
+  );
+}
 
 
-export default FlexDirectionBasics;
-
-
-//sdasdad
-//อยากโดนเเก้งาน
-//Mansea Here Again
+export default App;
