@@ -22,7 +22,7 @@ function App() {
 function HomeScreen({navigation}) {
   return (
     <View>
-      <Text>Home Screen</Text>
+      <Text>Home kuy</Text>
       <Button onPress={()=>navigation.navigate('Mansea')} title="Go to Mansea"></Button>
     </View>
   );
